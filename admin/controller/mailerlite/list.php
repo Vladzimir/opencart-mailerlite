@@ -115,7 +115,7 @@ class ControllerMailerLiteList extends Controller {
                     unset($new_registration[$list_info['id']]);
                 }
 
-                if ($this->request->post['mailerlite_affiliate']) {
+                if (isset($this->request->post['mailerlite_affiliate'])) {
                     $new_registration[$list_info['id']] = $this->request->post['mailerlite_affiliate'];
                 }
 
@@ -269,7 +269,7 @@ class ControllerMailerLiteList extends Controller {
                     unset($new_registration[$list_id]);
                 }
 
-                if ($this->request->post['mailerlite_affiliate']) {
+                if (isset($this->request->post['mailerlite_affiliate'])) {
                     $new_registration[$list_id] = $this->request->post['mailerlite_affiliate'];
                 }
 
